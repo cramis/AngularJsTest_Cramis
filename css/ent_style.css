@@ -1,0 +1,229 @@
+/* Reset CSS  */
+* { margin:0; padding:0; border:0; outline:0; vertical-align:top; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; }
+ul, ol, dl { list-style:none; }
+img, video { max-width:100%; border:0; vertical-align:top; }
+a { vertical-align:top; text-decoration:none; color:#000; }
+table { border-collapse:collapse; border-spacing:0; }
+input, select { vertical-align:middle; }
+body { font-family:'NanumGothicWeb', '돋움'; font-size:100%; line-height:1.5; }
+label { cursor:pointer; }
+.blind,legend,hr,caption { display:block; overflow:hidden; position:absolute; top:0; left:-1000em; }
+i,em,address { font-style:normal; font-weight:normal; }
+
+@font-face{
+	font-family:nr;
+	src:url('../font/NanumGothic.eot'); 
+	src:local(※), url('../font/NanumGothic.woff') format(‘woff’);
+}
+
+@font-face {
+ font-family: 'ng';
+ font-style: normal;
+src: url('../fonts/NANUMGOTHIC.eot');
+ src: url('../fonts/NANUMGOTHIC.eot') format('embedded-opentype'),
+ url('../fonts/NANUMGOTHIC.woff') format('woff'),
+ url('../fonts/NANUMGOTHIC.ttf') format('truetype');
+}
+
+@media screen and (min-width:640px)
+{
+	#main {width:640px; }
+}
+
+@media screen and (max-width:639px)
+{
+	#main {width:100%;}
+}
+
+
+body,input,textarea,select,button,table{font-family:'나눔고딕',ng,'돋움',dotum,applegothic,sans-serif;font-size:13px;color:#666}
+
+/*
+p {font-family:'NanumGothic','나눔고딕', ng; font-size:13px;}
+body, a {font-family:'NanumGothic','나눔고딕', ng;}
+*/
+
+
+.margin-sm{margin: 2px 2px 2px 2px;}
+.margin-mid{margin: 6px 6px 6px 6px;}
+.margin-lg{margin: 10px 10px 10px 10px;}
+
+.padding-sm{padding: 2px 2px 2px 2px;}
+.padding-mid{padding: 6px 6px 6px 6px;}
+.padding-lg{padding: 10px 10px 10px 10px;}
+
+
+.icon-search { font-size:100px; }
+
+.dropdown-toggle.right-icon-split { 
+	border-top-right-radius: 0;  
+	border-bottom-right-radius: 0;
+}
+#Login.modal, #myModal2.modal, #myModal3.modal, #myModal4.modal {
+  width:300px;
+  margin-left:-150px;
+}
+.scrollspy-example {
+height: 200px;
+overflow: auto;
+position: relative;
+}
+.bs-docs-tooltip-examples {
+text-align: center;
+margin: 0 0 10px;
+list-style: none;
+position:relative ;
+}
+.bs-docs-tooltip-examples li {
+display: inline;
+padding: 0 10px;
+}
+.bs-docs-popover-example1 {
+text-align: center;
+margin: 0 0 10px;
+list-style: none;
+}
+.bs-docs-popover-example1 li {
+display: inline;
+padding: 0 10px;
+}
+.bs-docs-popover-example2 {
+position:relative ;
+}
+.bs-docs-popover-example2 .popover {
+  left:0px !important;
+}
+.bs-docs-popover-example2 .arrow {
+  left:30px !important;
+}
+
+.jumbotron {
+color : #FFFFFF;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-transition: all 0.218s;
+  -moz-transition: all 0.218s;
+  -ms-transition: all 0.218s;
+  -o-transition: all 0.218s;
+  transition: all 0.218s;
+  
+  background-color: #30a7ea;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#30a7ea),to(#2DA4E6));
+  background-image: -webkit-linear-gradient(top,#30a7ea,#2DA4E6);
+  background-image: -moz-linear-gradient(top,#30a7ea,#2DA4E6);
+  background-image: -ms-linear-gradient(top,#30a7ea,#2DA4E6);
+  background-image: -o-linear-gradient(top,#30a7ea,#2DA4E6);
+  background-image: linear-gradient(top,#30a7ea,#2DA4E6);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  
+}
+
+.logo-header
+{
+  height : 60px;
+  
+  background-image: url('Donga-UI.gif');
+  background-repeat: no-repeat;
+  background-position: 20px; 
+
+}
+
+div .border-box{
+    border: 3px solid #79AAFF;
+}
+
+div .border-box-sm{
+    border: 1px solid #79AAFF;
+}
+
+div .border-box-lg{
+    border: 5px solid #79AAFF;
+}
+
+
+
+div .center{
+    text-align: center;
+}
+
+#myCarousel {
+  width:640px;
+}
+.carousel-control {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/****************** 세로형 슬라이드 ********************/
+#myCarousel2 {
+  width:640px;
+}
+.vertical .carousel-inner {
+  height: 100%;
+
+}
+
+.carousel.vertical .item {
+  -webkit-transition: 0.6s ease-in-out top;
+     -moz-transition: 0.6s ease-in-out top;
+      -ms-transition: 0.6s ease-in-out top;
+       -o-transition: 0.6s ease-in-out top;
+          transition: 0.6s ease-in-out top;
+}
+
+.carousel.vertical .active {
+  top: 0;
+}
+
+.carousel.vertical .next {
+  top: 100%;
+}
+
+.carousel.vertical .prev {
+  top: -100%;
+}
+
+.carousel.vertical .next.left,
+.carousel.vertical .prev.right {
+  top: 0;
+}
+
+.carousel.vertical .active.left {
+  top: -100%;
+}
+
+.carousel.vertical .active.right {
+  top: 100%;
+}
+
+.carousel.vertical .item {
+    left: 0;
+}
+
+/****************** 세로형 슬라이드  End ********************/
+
+
+
+.affix{
+  top:200px;
+  left:50px;
+}
+
+
+
+li {
+line-height: 15px;
+}
+
+
+h4.sub-title {
+  padding-left:20px;
+}
+
+
+
+
+
+
