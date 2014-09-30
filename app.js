@@ -37,3 +37,30 @@ function todoCtrl($scope){
 		
 	};
 };
+
+
+function fruitShopCtrl($scope){
+	var menuList = [
+		{itemid:1, itemNm: "사과", itemPrice: 2000, itemCount: 0},
+		{itemid:2, itemNm: "배", itemPrice: 2300, itemCount: 0},
+		{itemid:3, itemNm: "포도", itemPrice: 5000, itemCount: 0},
+		{itemid:4, itemNm: "토마토", itemPrice: 3500, itemCount: 0}
+		];
+
+$scope.menuList = menuList;
+$scope.totalPrice = 0;
+
+$scope.buy = function(){
+	
+	$scope.totalPrice = 0;
+	
+	//$scope.totalPrice  = $scope.menuList[1].itemPrice;
+	
+	
+	angular.forEach($scope.menuList, function(menu, idx){
+		$scope.totalPrice = $scope.totalPrice + (menu.itemPrice * Number(menu.itemCount));
+	});
+	
+};
+
+};
