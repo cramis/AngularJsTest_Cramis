@@ -26,6 +26,21 @@
 				background-color: black;
 			}
 			
+			.ng-invalid{
+				border: 3px solid red;
+			}
+			
+			.ng-valid{
+				border: 3px solid green;
+			}
+			
+			.ng-dirty{
+				border-style : dashed;
+			}
+			
+			
+			
+			
 		</style>
 		<title>과일 가게</title>
 		
@@ -78,5 +93,56 @@
 			
 			
 		</div>
+		<div>약관의 동의하세요 <input type="checkbox" ng-model="chk_accept" ng-init="chk_accept=false" />
+			<div>동의하면 다음으로 진행됩니다.<button ng-if="chk_accept">다음</button></div>
+		</div>
+		
+		
+		<!-- 유효성 검사 -->
+		<form name="sampleForm">
+		<div> 핸드폰 번호 <input type="text" name="tel" ng-model="tel" ng-pattern="/^\d{3}-\d{3,4}-\d{4}$/" /></div>
+		<span class="error" ng-show="sampleForm.tel.$error.pattern">000-0000-0000</span>
+		<p>sampleForm.tel.$dirty = {{sampleForm.tel.$dirty}}</p>
+		<p>sampleForm.tel.$valid = {{sampleForm.tel.$valid}}</p>
+		<p>sampleForm.tel.$error = {{sampleForm.tel.$error}}</p>
+		<p>sampleForm.$valid = {{sampleForm.$valid}}</p>
+		<p>sampleForm.$error.required = {{!!sampleForm.$error.required}}</p>
+		
+		</form>
+		
+		
+		<!-- 체크 박스 -->
+		
+		<div>선택1: <input type="checkbox" name="chk1" ng-model="value1" /></div>
+		<div>선택2: <input type="checkbox" name="chk2" ng-model="value2" ng-true-value="좋다" ng-false-value="싫다" /></div>
+		
+		<p>선택1 값 : {{value1}}</p>
+		<p>선택2 값 : {{value2}}</p>
+		
+		<!-- Select -->
+		<form name="myRoute">
+		<div>출발국가:<select ng-model="depCountry" ng-options="country.name for country in countryList" ng-required="true">
+			<option value="">선택해주세요.</option>
+		</select>
+		</div>
+		<div>경유국가:<select ng-model="viaCountry" ng-options="country.name as country.name  for country in countryList" >
+			<option value="">선택해주세요.</option>
+		</select>
+		</div>
+		
+		<div>도착국가:<select ng-model="arrCountry" ng-options="country.name group by country.continent  for country in countryList" ng-required="true">
+			<option value="">선택해주세요.</option>
+		</select>
+		</div>
+		
+		<p>출발국가: {{depCountry.name}}</p>
+		<p>경유국가: {{viaCountry}}</p>
+		<p>도착국가: {{arrCountry.name}}</p>
+		
+		</form>
+		<div ng-show="myRoute.$invalid">출발국가와 도착국가는 필히 선택해주세요.</div>
+		
+		
+		
 	</body>
 </html>

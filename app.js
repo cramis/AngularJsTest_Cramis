@@ -63,4 +63,14 @@ $scope.buy = function(){
 	
 };
 
+
+var countryList = 
+[
+{name: '한국', code: 'KR', continent: '아시아'},
+{name: '일본', code: 'JP', continent: '아시아'},
+{name: '미국', code: 'EN', continent: '북미'}
+];
+
+$scope.countryList = countryList;
+
 };
